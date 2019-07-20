@@ -15,10 +15,10 @@ locals {
 
   tags = merge(
     {
-      "Terraform"   = "true"
-      "Environment" = terraform.workspace
-      "Name"        = replace(var.name, "/[^a-zA-Z0-9-]/", "-")
-      "Description" = ""
+      Terraform   = true
+      Environment = terraform.workspace
+      Name        = replace(var.name, "/[^a-zA-Z0-9-]/", "-")
+      Description = ""
     },
     var.tags,
   )
